@@ -1,0 +1,17 @@
+export const pages = {
+  HOME: 'HOME',
+  /* tasks */
+  TASKS: 'TASKS',
+  TASK: 'TASK',
+  NEW_TASK: 'NEW_TASK',
+  /* tasklist */
+  TASKLISTS: 'TASKLISTS',
+  TASKLIST: 'TASKLIST',
+  NEW_TASKLIST: 'NEW_TASKLIST',
+
+  /* answers */
+  ANSWERS: 'ANSWERS',
+  ANSWER: 'ANSWER',
+  ANSWERS_BY_TASKLIST: 'ANSWERS_BY_TASKLIST',
+  ANSWERS_BY_STUDENT: 'ANSWERS_BY_STUDENT'
+}

@@ -1,0 +1,26 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+
+.link {
+  position: relative;
+  width: 100%;
+  font-size: 19px !important;
+  color: #40a9ff;
+  text-decoration: none;
+}
+
+.active {
+  &::before {
+    position: absolute;
+    top: 22px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    content: '';
+    background-color: #40a9ff;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 80px;
+  padding: 0 24px;
+  margin: 0 auto;
+  box-shadow: 0 1px #e8e8e8;
+}
+
+.title {
+  margin: 0;
+}
+
+.signOutButton {
+  margin-left: 24px;
+}
+
+.nav {
+  margin-left: auto;
+  font-size: 19px;
+}
+
+.navLink {
+  margin-left: 16px;
+}
+
+.logo {
+  width: 300px;
+}
