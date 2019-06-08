@@ -1,4 +1,4 @@
-import { actions } from '../reducers/list'
+import { actions } from '../../reducers/list'
 import { fetchListRequest } from '../api/fetchListRequest'
 import qs from 'querystring'
 
