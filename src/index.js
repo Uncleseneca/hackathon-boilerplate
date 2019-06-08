@@ -7,9 +7,13 @@ import configureStore from './domain/store/configureStore'
 import * as components from './components'
 import Layout from 'ui/layout'
 import './index.css'
+import { useThunk } from '@breadhead/thunk-utils'
+import { refirectIfUnauthorized } from 'domain/user/actions/redirectIfUnauthorized'
 
 // App component
 const App = ({ page }) => {
+  const dispatch = useThunk()
+  dispatch(refirectIfUnauthorized())
   const Component = components[page]
   if (!Component) throw Error('check components map')
   return (

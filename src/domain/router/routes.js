@@ -2,5 +2,5 @@ import { pages } from './pages'
 
 export default {
   [pages.HOME]: '/',
-  [pages.SIGNIN]: '/sign-in'
+  [pages.SIGNIN]: { path: '/sign-in' }
 }

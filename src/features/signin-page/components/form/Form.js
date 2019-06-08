@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Form as AntForm, Icon, Input, Button } from 'antd'
+import { useForm } from './hooks/useForm'
 
 function hasErrors(fieldsError) {
   return Object.keys(fieldsError).some(field => fieldsError[field])
@@ -15,21 +16,11 @@ const LoginForm = ({
   }
 }) => {
   // Only show error after a field is touched.
-  const emailError = isFieldTouched('email') && getFieldError('email')
-  const passwordError = isFieldTouched('password') && getFieldError('password')
-  const handleSubmit = e => {
-    e.preventDefault()
-    validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values)
-      }
-    })
-  }
-
-  useEffect(() => {
-    validateFields()
-    // eslint-disable-next-line
-  }, [])
+  const { handleSubmit, emailError, passwordError } = useForm(
+    isFieldTouched,
+    getFieldError,
+    validateFields
+  )
 
   return (
     <AntForm layout="vertical" onSubmit={handleSubmit}>
