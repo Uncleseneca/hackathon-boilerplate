@@ -13,7 +13,7 @@ import { refirectIfUnauthorized } from 'domain/user/actions/redirectIfUnauthoriz
 // App component
 const App = ({ page }) => {
   const dispatch = useThunk()
-  dispatch(refirectIfUnauthorized())
+  // dispatch(refirectIfUnauthorized())
   const Component = components[page]
   if (!Component) throw Error('check components map')
   return (

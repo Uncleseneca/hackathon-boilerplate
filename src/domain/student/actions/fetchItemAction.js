@@ -1,4 +1,4 @@
-import { actions } from '../../reducers/item'
+import { actions } from '../reducers/item'
 import { fetchItemRequest } from '../api/fetchItemRequest'
 
 export const fetchItemAction = id => async (dispatch, getState, { extra }) => {

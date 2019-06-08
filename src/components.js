@@ -2,3 +2,6 @@
 export { HomePage as HOME } from 'features/home-page'
 
 export { SigninPage as SIGNIN } from 'features/signin-page'
+
+// students
+export { StudentsPage as STUDENTS } from 'features/students-page'
