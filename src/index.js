@@ -4,7 +4,7 @@ import { connect, Provider } from 'react-redux'
 import ReactDOM from 'react-dom'
 import { StoreContext } from 'redux-react-hook'
 import configureStore from './domain/store/configureStore'
-import * as components from './pages'
+import * as components from './components'
 import Layout from 'ui/layout'
 import './index.css'
 

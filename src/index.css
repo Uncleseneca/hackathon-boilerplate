@@ -25,3 +25,11 @@
   display: flex;
   align-items: center;
 }
+
+body {
+  font-size: 18px;
+}
+
+.ant-breadcrumb {
+  font-size: 18px;
+}
