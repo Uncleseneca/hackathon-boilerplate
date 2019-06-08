@@ -1,2 +1,2 @@
-export const fetchListRequest = api => () =>
-  api.client.get(`/{{kebabCase name}}`).then(response => response.data)
+export const fetchListRequest = api => query =>
+  api.client.get(`/{{kebabCase name}}?${query}`).then(response => response.data)

@@ -1,5 +1,4 @@
 import { updateItemRequest } from '../api/updateItemRequest'
-import { pages } from 'domain/router/pages'
 
 export const updateItemAction = (id, data) => async (
   dispatch,

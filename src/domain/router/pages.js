@@ -2,5 +2,8 @@ export const pages = {
   HOME: 'HOME',
 
   /* signin */
-  SIGNIN: 'SIGNIN'
+  SIGNIN: 'SIGNIN',
+
+  /* students */
+  STUDENTS: 'STUDENTS'
 }

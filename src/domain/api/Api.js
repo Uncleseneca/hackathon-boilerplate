@@ -8,7 +8,7 @@ export class Api {
   constructor(token) {
     const authHeaders = !!token ? { Authorization: `Bearer ${token}` } : {}
     this.axios = axios.create({
-      baseURL: 'http://localhost:3001/api',
+      baseURL: process.env.REACT_APP_API_URL,
       headers: authHeaders
     })
   }
