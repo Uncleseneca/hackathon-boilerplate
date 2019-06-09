@@ -10,7 +10,7 @@ export const Navigation = ({ className }) => {
   return (
     <nav className={cx(s.nav, className)}>
       <Link to="/">
-        <h1 className={s.logo}>Сложнотрон</h1>
+        <h1 className={s.logo}>Re.com</h1>
       </Link>
       <Breadcrumb separator="">
         {values.map(value => (

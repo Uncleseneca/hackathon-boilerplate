@@ -1,11 +1,21 @@
 import React from 'react'
 import { Tag, Avatar } from 'antd'
+import { format } from 'date-fns'
 
 export const columns = [
   {
     title: 'Фото',
     dataIndex: 'photo',
     render: src => <Avatar icon="user" />
+  },
+
+  {
+    title: 'Рейтинг',
+    dataIndex: 'rating'
+  },
+  {
+    title: 'Университет',
+    dataIndex: 'university'
   },
   {
     title: 'ФИО',
@@ -15,7 +25,8 @@ export const columns = [
   {
     title: 'Дата рождения',
     dataIndex: 'birthDate',
-    key: 'birthDate'
+    key: 'birthDate',
+    render: text => format(new Date(text), 'DD/MM/YYYY')
   },
   {
     title: 'Email',
@@ -37,9 +48,5 @@ export const columns = [
         })}
       </span>
     )
-  },
-  {
-    title: 'Рейтинг',
-    dataIndex: 'rating'
   }
 ]

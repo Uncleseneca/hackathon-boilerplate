@@ -5,5 +5,6 @@ export const pages = {
   SIGNIN: 'SIGNIN',
 
   /* students */
-  STUDENTS: 'STUDENTS'
+  STUDENTS: 'STUDENTS',
+  STUDENTS_SEARCH: 'STUDENTS_SEARCH'
 }
