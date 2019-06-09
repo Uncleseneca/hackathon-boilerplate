@@ -4,6 +4,7 @@ import { useForm } from './hooks/useForm'
 import { universities } from './universities'
 import { skills } from './skills'
 import s from './Search.module.css'
+import { employers } from './employers'
 const { Option } = Select
 
 function hasErrors(fieldsError) {
@@ -45,6 +46,17 @@ const SearchForm = ({
             {skills.map(skill => (
               <Option key={skill} value={skill}>
                 {skill}
+              </Option>
+            ))}
+          </Select>
+        )}
+      </AntForm.Item>
+      <AntForm.Item className={s.shortField} label="Компания">
+        {getFieldDecorator('employer')(
+          <Select mode="multiple">
+            {employers.map(employer => (
+              <Option key={employer} value={employer}>
+                {employer}
               </Option>
             ))}
           </Select>

@@ -5,6 +5,7 @@ import { size } from 'lodash'
 import { filterByValuesEvery } from './filterByValuesEvery'
 import { filterByValuesSome } from './filterByValuesSome'
 import { filterByRating } from './filterByRating'
+import { filterByValuesSomeOfMany } from './filterByValuesSomeOfMany'
 
 export const filterStudents = (students, filters) => {
   return students.filter(student => {
@@ -22,6 +23,12 @@ export const filterStudents = (students, filters) => {
 
     if (size(filters.university)) {
       if (!filterByValuesSome(student.university, filters.university)) {
+        return false
+      }
+    }
+
+    if (size(filters.employer)) {
+      if (!filterByValuesSomeOfMany(student.employer, filters.employer)) {
         return false
       }
     }

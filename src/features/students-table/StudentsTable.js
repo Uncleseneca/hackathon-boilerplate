@@ -7,6 +7,8 @@ import { selectList } from 'domain/student/selectors/selectList'
 
 export const StudentsTable = () => {
   const students = useMappedState(selectList)
+  console.log(students.slice(5))
+
   return (
     <div>
       <Table columns={columns} dataSource={students} />

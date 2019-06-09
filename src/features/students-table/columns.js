@@ -1,4 +1,5 @@
 import React from 'react'
+import { head } from 'lodash'
 import { Tag, Avatar } from 'antd'
 import { format } from 'date-fns'
 
@@ -16,6 +17,11 @@ export const columns = [
   {
     title: 'Университет',
     dataIndex: 'university'
+  },
+  {
+    title: 'Компания',
+    dataIndex: 'employer',
+    render: employer => <a href="javascript:;">{head(employer)}</a>
   },
   {
     title: 'ФИО',
