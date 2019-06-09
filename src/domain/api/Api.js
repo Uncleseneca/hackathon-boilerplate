@@ -8,7 +8,7 @@ export class Api {
   constructor(token) {
     const authHeaders = !!token ? { Authorization: `Bearer ${token}` } : {}
     this.axios = axios.create({
-      baseURL: 'http://socify.cloud:4000',
+      baseURL: 'https://hackathon-server-dnacykpppq.now.sh',
       headers: authHeaders
     })
   }
