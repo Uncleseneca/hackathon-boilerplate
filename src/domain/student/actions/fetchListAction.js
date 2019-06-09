@@ -1,15 +1,13 @@
 import { actions } from '../reducers/list'
 import { fetchListRequest } from '../api/fetchListRequest'
-import qs from 'querystring'
+import { filterStudents } from '../helpers/filterStudents'
 
-export const fetchListAction = (query ) => async (
+export const fetchListAction = query => async (
   dispatch,
   getState,
   { extra }
 ) => {
-
-
-  const result = await fetchListRequest(extra())()
-  // const filteredResult = query ? result
-  return dispatch(actions.add(result))
+  const students = await fetchListRequest(extra())()
+  const filteredResult = query ? filterStudents(students, query) : students
+  return dispatch(actions.add(filteredResult))
 }

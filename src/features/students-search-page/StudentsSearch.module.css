@@ -2,11 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .search {
+  width: 800px;
 }
 
 .result {

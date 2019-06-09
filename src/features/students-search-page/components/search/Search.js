@@ -3,7 +3,7 @@ import { Form as AntForm, Button, InputNumber, Slider, Select } from 'antd'
 import { useForm } from './hooks/useForm'
 import { universities } from './universities'
 import { skills } from './skills'
-
+import s from './Search.module.css'
 const { Option } = Select
 
 function hasErrors(fieldsError) {
@@ -19,18 +19,18 @@ const SearchForm = ({
   return (
     <AntForm layout="vertical" onSubmit={handleSubmit}>
       <AntForm.Item label="Рейтинг">
-        {getFieldDecorator('rating')(
-          <Slider range min={0} max={100} defaultValue={[60, 85]} />
-        )}
+        {getFieldDecorator('rating', {
+          initialValue: [60, 85]
+        })(<Slider tooltipVisible range min={0} max={100} />)}
       </AntForm.Item>
       <AntForm.Item label="Возраст">
-        {getFieldDecorator('age')(
-          <Slider range min={10} max={50} defaultValue={[20, 25]} />
-        )}
+        {getFieldDecorator('age', {
+          initialValue: [20, 25]
+        })(<Slider tooltipVisible range min={10} max={50} />)}
       </AntForm.Item>
-      <AntForm.Item label="Университет">
+      <AntForm.Item className={s.shortField} label="Университет">
         {getFieldDecorator('university')(
-          <Select>
+          <Select mode="multiple">
             {universities.map(university => (
               <Option key={university} value={university}>
                 {university}
@@ -39,8 +39,8 @@ const SearchForm = ({
           </Select>
         )}
       </AntForm.Item>
-      <AntForm.Item label="Навыки">
-        {getFieldDecorator('university')(
+      <AntForm.Item className={s.shortField} label="Навыки">
+        {getFieldDecorator('skills')(
           <Select mode="multiple">
             {skills.map(skill => (
               <Option key={skill} value={skill}>
